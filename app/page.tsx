@@ -1,16 +1,5 @@
-import { NavBar } from "@/components/changeable-component/navbar";
-import { MainConatiner } from "@/components/container/screen";
-
-
+"use client";
 
 export default function Home() {
-  return (
-    <div>
-      <MainConatiner>
-        <NavBar />
-     
-      </MainConatiner>
-    </div>
-    
-  );
+  return <div className="font-medium font-mono">working on it</div>;
 }
