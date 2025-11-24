@@ -1,11 +1,9 @@
-
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MainConatiner } from "@/components/ui/container";
 import { NavBar } from "@/components/ui/navbar";
 import { Metadata } from "next";
-
+import { ThemeProvider } from "@/components/ui/theme-prvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "uzwal ",
   description: "Full-stack developer portfolio showcasing projects, work samples.",
   keywords: [
@@ -58,21 +56,20 @@ export const metadata:Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <MainConatiner>
-          <NavBar/>
-          {children}
-        </MainConatiner>
+        <ThemeProvider attribute={"class"} disableTransitionOnChange>
+          <MainConatiner>
+            <NavBar />
+            {children}
+          </MainConatiner>
+        </ThemeProvider>
       </body>
     </html>
   );
