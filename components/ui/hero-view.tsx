@@ -126,7 +126,7 @@ export const HeroSection=()=>{
         <div className="border-t w-full  py-0.5">
           <div className="flex flex-col gap-1 justify-start items-start  px-1.5 py-2">
             {ShortBio.map((bio, i) => (
-              <div className="flex  f gap-2 items-center  justify-start text-[12px] dark:text-neutral-400 text-neutral-600 font-semibold  ">
+              <div key={i} className="flex  f gap-2 items-center  justify-start text-[12px] dark:text-neutral-400 text-neutral-600 font-semibold  ">
                 <span className=" ">{bio.icons}</span>
                 <p>{bio.data}</p>
               </div>

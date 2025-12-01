@@ -1,6 +1,14 @@
 "use client"
-import { Reusme } from "@/components/ui/resume-view";
+import dynamic from "next/dynamic";
+
+const Reusme = dynamic(() => import("@/components/ui/resume-view"), {
+  ssr: false,
+});
 
 export default function Page() {
-  return <Reusme />;
+  return (
+    <div className="p-4">
+      <Reusme />
+    </div>
+  );
 }

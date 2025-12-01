@@ -127,13 +127,19 @@
 }
 
 
-.pdf-wrapper {
-  width: 85%;
-}
 
 .pdf-page canvas {
   max-width: 100% !important;
   height: auto !important;
   border-radius: 8px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
