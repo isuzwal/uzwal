@@ -13,7 +13,7 @@ interface AnimatedThemeTogglerProps
 
 export const AnimatedThemeToggler = ({
   className,
-  duration = 500,
+  duration = 800,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const [isDark, setIsDark] = useState(false)

@@ -125,3 +125,15 @@
     animation: none;
     mix-blend-mode: normal;
 }
+
+
+.pdf-wrapper {
+  width: 85%;
+}
+
+.pdf-page canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}

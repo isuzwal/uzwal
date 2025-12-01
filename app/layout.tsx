@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "uzwal ",
+  title: "uzwal - Full Stack Developer",
   description: "Full-stack developer portfolio showcasing projects, work samples.",
   keywords: [
     "Portfolio",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   creator: "Uzwal",
   // metadataBase: new URL("https:"),
   openGraph: {
-    title: "Uzwal Portfolio",
+    title: "Uzwal - Full Stack Developer",
     description: "Full-stack developer portfolio showcasing projects and work.",
     // url: "https:",
     siteName: "uzwal tech",
