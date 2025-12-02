@@ -16,7 +16,7 @@ export const NavBar = () => {
 
 
   return (
-    <div className="flex   sticky top-0 z-50 bg-white   dark:bg-neutral-900/30  backdrop-blur-xl  border-b-2 items-center justify-between px-2 py-2">
+    <div className="flex   sticky top-0 z-60 bg-white   dark:bg-neutral-900/30  backdrop-blur-xl  border-b-2 items-center justify-between px-2 py-2">
       <motion.div
         className="  flex items-center justify-center    overflow-hidden border bg-neutral-50 shadow-[inset_0_-3px_6px_rgb(215,215,215,0.25)_inset_0_3px_6px_rgb(215,215,215.25)]   rounded-full  dark:bg-neutral-950 dark:shadow-[inset_0_3px_3px_rgb(45,45,45,0.5)]  p-0 ">
         <Link href="/" className="font-mono cursor-pointer text-[20px]   ">

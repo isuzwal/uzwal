@@ -140,7 +140,9 @@ export const HeroSection=()=>{
                className="px-4 py-2  flex items-center gap-2   cursor-pointer rounded-md font-semibold text-sm dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(40,40,40,1.5)] bg-neutral-100 shadow-[inset_2px_2px_4px_rgba(210,210,210,1)] hover:shadow-[inset_2px_2px_4px_rgba(180,180,180,1)]  duration-300 ease-in-out  ">
                   <FileText className="size-4" /> Resume/CV
                </motion.button>
-               <motion.button whileHover={{scale:0.99}} className=" flex  gap-2 text-white dark:text-black items-center px-4 py-2 cursor-pointer rounded-md font-semibold text-sm bg-neutral-900  dark:bg-neutral-100 dark:shadow-[inset_2px_2px_4px_rgba(210,210,210,1)] shadow-[inset_0px_2px_2px_rgba(190,190,190,1)]  hover:shadow-[inset_2px_2px_4px_rgba(190,190,190,1)] duration-300 ease-in-out tracking-tight">
+               <motion.button
+                 onClick={()=>router.push("/touch")}
+               whileHover={{scale:0.99}} className=" flex  gap-2 text-white dark:text-black items-center px-4 py-2 cursor-pointer rounded-md font-semibold text-sm bg-neutral-900  dark:bg-neutral-100 dark:shadow-[inset_2px_2px_4px_rgba(210,210,210,1)] shadow-[inset_0px_2px_2px_rgba(190,190,190,1)]  hover:shadow-[inset_2px_2px_4px_rgba(190,190,190,1)] duration-300 ease-in-out tracking-tight">
                 <Send className="size-4" /> Get in touch
                </motion.button>
              </div>
