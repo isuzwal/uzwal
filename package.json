@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
     "baseline-browser-mapping": "^2.8.32",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -21,6 +23,7 @@
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
     "react-pdf": "^10.2.0",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@ import { MainConatiner } from "@/components/ui/container";
 import { NavBar } from "@/components/ui/navbar";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ui/theme-prvider";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,18 @@ export default function RootLayout({
             <NavBar />
             {children}
           </MainConatiner>
+        <Toaster
+  toastOptions={{
+    classNames: {
+      success:
+        "bg-green-500 text-white border-green-600 hover:bg-green-700 transition-colors duration-200",
+
+      error:
+        "bg-red-500 text-white border-red-600 hover:bg-red-700 transition-colors duration-200",
+    },
+  }}
+/>
+
         </ThemeProvider>
       </body>
     </html>

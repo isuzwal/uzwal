@@ -23,7 +23,7 @@ export const HeroSection=()=>{
                   alt="uzwal"
                   width={100}
                   height={100}
-                  className="rounded-full border-3 border-neutral-900 object-cover shadow-2xs"
+                  className="rounded-full border-3 border-neutral-900 object-cover shadow-2xs grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
                 />
               </div>
             </div>
