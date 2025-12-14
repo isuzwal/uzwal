@@ -31,22 +31,22 @@ interface MediaLink {
 
 export const SocialMedia: MediaLink[] = [
   {
-    icon: <Twitter className="size-5" />,
+    icon: <Twitter className="size-4" />,
     lablename: "X",
     link: "https://x.com/isuzwal",
   },
   {
-    icon: <Github className="size-5" />,
+    icon: <Github className="size-4" />,
     lablename: "Github",
     link: "https://github.com/isuzwal",
   },
   {
-    icon: <Linkedin className="size-5" />,
+    icon: <Linkedin className="size-4" />,
     lablename: "LinkedIn",
     link: "https://www.linkedin.com/in/isuzwal-9719ba289/",
   },
   {
-    icon: <SiPeerlist className="size-5" />,
+    icon: <SiPeerlist className="size-4" />,
     lablename: "PeerList",
     link: "https://peerlist.io/lufffy",
   },
@@ -58,19 +58,19 @@ interface BIOProps {
 }
 export const ShortBio: BIOProps[] = [
   {
-    icons: <Code className="size-5" />,
+    icons: <Code className="size-4" />,
     data: "Full Stack developer",
   },
   {
-    icons: <Map className="size-5" />,
+    icons: <Map className="size-4" />,
     data: "Nepal,Np",
   },
   {
-    icons: <MailIcon className="size-5" />,
+    icons: <MailIcon className="size-4" />,
     data: "ujjwalgaihre0@gmail.com",
   },
   {
-    icons: <GoDotFill className="size-5 text-green-400  drop-shadow-[0_0_6px_#22c55e] " />,
+    icons: <GoDotFill className="size-4 text-green-400  drop-shadow-[0_0_6px_#22c55e] " />,
     data: " Available for Hire",
   },
 ];
@@ -83,7 +83,7 @@ interface SkillsProps {
 export const Skills: SkillsProps[] = [
   {
     icon: (
-      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <path
           fill="#00bcd4"
           d="M16 12c7.444 0 12 2.59 12 4s-4.556 4-12 4s-12-2.59-12-4s4.556-4 12-4m0-2c-7.732 0-14 2.686-14 6s6.268 6 14 6s14-2.686 14-6s-6.268-6-14-6"
@@ -102,9 +102,10 @@ export const Skills: SkillsProps[] = [
     skill_name: "React",
     lablename: "React",
   },
+ 
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 128 128">
         <path
           fill="#83CD29"
           d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772c8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086c-3.146 1.783-3.726 2.02-6.677 3.043c-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 0 0 4.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066c-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566c0 7.466 4.059 16.512 23.453 16.512c14.039 0 22.088-5.455 22.088-15.109c0-9.572-6.467-12.084-20.082-13.886c-13.762-1.819-15.16-2.738-15.16-5.962c0-2.658 1.184-6.203 11.374-6.203c9.105 0 12.461 1.954 13.842 8.091c.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396c.24-.272.367-.613.335-.979c-.891-10.568-7.912-15.493-22.112-15.493c-12.631 0-20.166 5.334-20.166 14.275c0 9.698 7.497 12.378 19.622 13.577c14.505 1.422 15.633 3.542 15.633 6.395c0 4.955-3.978 7.066-13.309 7.066z"
@@ -114,39 +115,10 @@ export const Skills: SkillsProps[] = [
     skill_name: "Node.js",
     lablename: "Node.js",
   },
+ 
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
-        <g fill="none">
-          <rect width="256" height="256" fill="#007ACC" rx="60" />
-          <path
-            fill="#fff"
-            d="m56.611 128.849l-.081 10.484h33.32v94.679h23.57v-94.679h33.32v-10.281c0-5.689-.121-10.443-.284-10.565c-.122-.162-20.399-.244-44.983-.203l-44.739.122l-.122 10.443Zm149.956-10.741c6.501 1.626 11.459 4.511 16.01 9.224c2.357 2.52 5.851 7.112 6.136 8.209c.081.325-11.053 7.802-17.798 11.987c-.244.163-1.22-.894-2.317-2.519c-3.291-4.795-6.745-6.868-12.028-7.233c-7.761-.529-12.759 3.535-12.718 10.321c0 1.991.284 3.169 1.097 4.795c1.706 3.535 4.876 5.648 14.832 9.955c18.326 7.884 26.168 13.085 31.045 20.48c5.445 8.249 6.664 21.415 2.966 31.208c-4.063 10.646-14.141 17.879-28.323 20.277c-4.388.772-14.791.65-19.504-.203c-10.281-1.829-20.033-6.908-26.047-13.572c-2.357-2.601-6.949-9.387-6.664-9.875c.121-.162 1.178-.812 2.356-1.503c1.138-.65 5.446-3.129 9.509-5.486l7.355-4.267l1.544 2.276c2.154 3.291 6.867 7.802 9.712 9.305c8.167 4.308 19.383 3.698 24.909-1.259c2.357-2.154 3.332-4.389 3.332-7.68c0-2.967-.366-4.267-1.91-6.502c-1.991-2.844-6.054-5.242-17.595-10.24c-13.206-5.689-18.895-9.224-24.096-14.832c-3.007-3.25-5.852-8.452-7.03-12.8c-.975-3.616-1.219-12.678-.447-16.335c2.722-12.759 12.353-21.658 26.25-24.3c4.511-.853 14.994-.528 19.424.569Z"
-          />
-        </g>
-      </svg>
-    ),
-    skill_name: "Type script",
-    lablename: "Type script",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
-        <g fill="none">
-          <rect width="256" height="256" fill="#F0DB4F" rx="60" />
-          <path
-            fill="#323330"
-            d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.579c-17.357-7.388-28.871-16.668-28.871-36.258c0-18.044 13.748-31.792 35.229-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.139 14.778 14.608l6.014 2.577c20.449 8.765 31.963 17.699 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574"
-          />
-        </g>
-      </svg>
-    ),
-    skill_name: "Java script",
-    lablename: "Java script",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
         <g fill="none">
           <g clipPath="url(#akarIconsNextjsFill0)">
             <path
@@ -167,7 +139,20 @@ export const Skills: SkillsProps[] = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 384">
+        <path fill="#0ACF83" d="M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64"/>
+        <path fill="#A259FF" d="M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64"/>
+        <path fill="#F24E1E" d="M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64"/>
+        <path fill="#FF7262" d="M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64z"/>
+        <path fill="#1ABCFE" d="M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64s28.672-64 64-64s64 28.672 64 64"/>
+      </svg>
+    ),
+    skill_name: "Figma",
+    lablename: "Figma",
+  },
+    {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
         <g fill="none">
           <rect width="256" height="256" fill="#023430" rx="60" />
           <path
@@ -190,7 +175,7 @@ export const Skills: SkillsProps[] = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
         <path
           fill="currentColor"
           d="M20.493 6.725c.256-.334.652-.53 1.073-.53h.34l-4.392 5.743L22 17.803h-.34a1.35 1.35 0 0 1-1.073-.53l-3.576-4.676l-3.577 4.676a1.35 1.35 0 0 1-1.072.53h-.34l4.485-5.865l-4.391-5.743h.34c.42 0 .817.196 1.072.53l3.482 4.554z"
@@ -208,7 +193,7 @@ export const Skills: SkillsProps[] = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
         <g fill="none">
           <rect width="256" height="256" fill="#2396ED" rx="60" />
           <path
@@ -223,7 +208,7 @@ export const Skills: SkillsProps[] = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 432 416">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 432 416">
         <path
           fill="currentColor"
           d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"
@@ -235,11 +220,27 @@ export const Skills: SkillsProps[] = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
     <path fill="currentColor" d="M21.807 18.285L13.553.756a1.324 1.324 0 0 0-1.129-.754a1.31 1.31 0 0 0-1.206.626l-8.952 14.5a1.356 1.356 0 0 0 .016 1.455l4.376 6.778a1.408 1.408 0 0 0 1.58.581l12.703-3.757c.389-.115.707-.39.873-.755s.164-.783-.007-1.145zm-1.848.752L9.18 22.224a.452.452 0 0 1-.575-.52l3.85-18.438c.072-.345.549-.4.699-.08l7.129 15.138a.515.515 0 0 1-.325.713z"/>
 </svg>
     ),
     skill_name: "Prisma",
     lablename: "Prisma",
   },
-];
+   {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 236">
+      <path fill="#E24329" d="m128.075 236.075l47.104-144.97H80.97l47.104 144.97Z"/>
+      <path fill="#FC6D26" d="m128.075 236.074l-47.104-144.97H16.816l111.259 144.97Z"/>
+      <path fill="#FCA326" d="M16.816 91.104L.275 142.006a10.95 10.95 0 0 0 3.98 12.235l123.82 89.833z"/>
+      <path fill="#E24329" d="M16.816 91.105h64.155L52.822 5.15a5.49 5.49 0 0 0-10.454 0z"/>
+      <path fill="#FC6D26" d="m128.075 236.074l47.104-144.97h64.155z"/>
+      <path fill="#FCA326" d="m239.259 91.104l16.54 50.902a10.95 10.95 0 0 1-3.98 12.235l-123.744 89.833z"/>
+      <path fill="#E24329" d="M239.259 91.105h-64.155l28.149-85.954a5.49 5.49 0 0 1 10.454 0z"/>
+      </svg>
+    ),
+    skill_name: "GitLab",
+    lablename: "GitLab",
+    },
+
+  ];
