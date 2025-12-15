@@ -133,7 +133,7 @@ export const HeroSection=()=>{
             ))}
           </div>
            </div>
-         <div className="flex gap-2 items-center px-2 mr-3 py-1.5 w-full  ">
+         <div className="flex gap-2 items-center px-2  py-1.5 w-full  ">
                <motion.button 
                onClick={()=>router.push("/resume")}
                whileHover={{scale:0.99}}

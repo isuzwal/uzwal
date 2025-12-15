@@ -1,7 +1,7 @@
-import { Code, Github, Linkedin, MailIcon, Map, Twitter } from "lucide-react";
-import { JSX } from "react";
-import { GoDotFill } from "react-icons/go";
-import { SiPeerlist } from "react-icons/si";
+import { Code, Github, Linkedin, MailIcon, Map, Twitter } from 'lucide-react';
+import { JSX } from 'react';
+import { GoDotFill } from 'react-icons/go';
+import { SiPeerlist } from 'react-icons/si';
 export interface ChildrenProps {
   children: React.ReactNode;
 }
@@ -13,13 +13,13 @@ export interface LinkProps {
 
 export const Links: LinkProps[] = [
   {
-    name: "Projects",
-    link: "/projects",
+    name: 'Projects',
+    link: '/projects',
   },
-  
+
   {
-    name: "Work",
-    link: "/work",
+    name: 'Work',
+    link: '/work',
   },
 ];
 
@@ -32,23 +32,23 @@ interface MediaLink {
 export const SocialMedia: MediaLink[] = [
   {
     icon: <Twitter className="size-4" />,
-    lablename: "X",
-    link: "https://x.com/isuzwal",
+    lablename: 'X',
+    link: 'https://x.com/isuzwal',
   },
   {
     icon: <Github className="size-4" />,
-    lablename: "Github",
-    link: "https://github.com/isuzwal",
+    lablename: 'Github',
+    link: 'https://github.com/isuzwal',
   },
   {
     icon: <Linkedin className="size-4" />,
-    lablename: "LinkedIn",
-    link: "https://www.linkedin.com/in/isuzwal-9719ba289/",
+    lablename: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/isuzwal-9719ba289/',
   },
   {
     icon: <SiPeerlist className="size-4" />,
-    lablename: "PeerList",
-    link: "https://peerlist.io/lufffy",
+    lablename: 'PeerList',
+    link: 'https://peerlist.io/lufffy',
   },
 ];
 
@@ -59,19 +59,19 @@ interface BIOProps {
 export const ShortBio: BIOProps[] = [
   {
     icons: <Code className="size-4" />,
-    data: "Full Stack developer",
+    data: 'Full Stack developer',
   },
   {
     icons: <Map className="size-4" />,
-    data: "Nepal,Np",
+    data: 'Nepal,Np',
   },
   {
     icons: <MailIcon className="size-4" />,
-    data: "ujjwalgaihre0@gmail.com",
+    data: 'ujjwalgaihre0@gmail.com',
   },
   {
     icons: <GoDotFill className="size-4 text-green-400  drop-shadow-[0_0_6px_#22c55e] " />,
-    data: " Available for Hire",
+    data: ' Available for Hire',
   },
 ];
 
@@ -99,10 +99,10 @@ export const Skills: SkillsProps[] = [
         />
       </svg>
     ),
-    skill_name: "React",
-    lablename: "React",
+    skill_name: 'React',
+    lablename: 'React',
   },
- 
+
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 128 128">
@@ -112,10 +112,10 @@ export const Skills: SkillsProps[] = [
         />
       </svg>
     ),
-    skill_name: "Node.js",
-    lablename: "Node.js",
+    skill_name: 'Node.js',
+    lablename: 'Node.js',
   },
- 
+
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -134,23 +134,32 @@ export const Skills: SkillsProps[] = [
         </g>
       </svg>
     ),
-    skill_name: "Next.js",
-    lablename: "Next.js",
+    skill_name: 'Next.js',
+    lablename: 'Next.js',
   },
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 384">
-        <path fill="#0ACF83" d="M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64"/>
-        <path fill="#A259FF" d="M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64"/>
-        <path fill="#F24E1E" d="M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64"/>
-        <path fill="#FF7262" d="M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64z"/>
-        <path fill="#1ABCFE" d="M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64s28.672-64 64-64s64 28.672 64 64"/>
+        <path
+          fill="#0ACF83"
+          d="M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64"
+        />
+        <path
+          fill="#A259FF"
+          d="M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64"
+        />
+        <path fill="#F24E1E" d="M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64" />
+        <path fill="#FF7262" d="M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64z" />
+        <path
+          fill="#1ABCFE"
+          d="M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64s28.672-64 64-64s64 28.672 64 64"
+        />
       </svg>
     ),
-    skill_name: "Figma",
-    lablename: "Figma",
+    skill_name: 'Figma',
+    lablename: 'Figma',
   },
-    {
+  {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
         <g fill="none">
@@ -170,8 +179,8 @@ export const Skills: SkillsProps[] = [
         </g>
       </svg>
     ),
-    skill_name: "MongoDB",
-    lablename: "MongoDB",
+    skill_name: 'MongoDB',
+    lablename: 'MongoDB',
   },
   {
     icon: (
@@ -188,8 +197,8 @@ export const Skills: SkillsProps[] = [
         />
       </svg>
     ),
-    skill_name: "Express.js",
-    lablename: "Express.js",
+    skill_name: 'Express.js',
+    lablename: 'Express.js',
   },
   {
     icon: (
@@ -203,8 +212,8 @@ export const Skills: SkillsProps[] = [
         </g>
       </svg>
     ),
-    skill_name: "Docker",
-    lablename: "Docker",
+    skill_name: 'Docker',
+    lablename: 'Docker',
   },
   {
     icon: (
@@ -215,32 +224,74 @@ export const Skills: SkillsProps[] = [
         />
       </svg>
     ),
-    skill_name: "GitHub",
-    lablename: "GitHub",
+    skill_name: 'GitHub',
+    lablename: 'GitHub',
   },
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M21.807 18.285L13.553.756a1.324 1.324 0 0 0-1.129-.754a1.31 1.31 0 0 0-1.206.626l-8.952 14.5a1.356 1.356 0 0 0 .016 1.455l4.376 6.778a1.408 1.408 0 0 0 1.58.581l12.703-3.757c.389-.115.707-.39.873-.755s.164-.783-.007-1.145zm-1.848.752L9.18 22.224a.452.452 0 0 1-.575-.52l3.85-18.438c.072-.345.549-.4.699-.08l7.129 15.138a.515.515 0 0 1-.325.713z"/>
-</svg>
-    ),
-    skill_name: "Prisma",
-    lablename: "Prisma",
-  },
-   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 236">
-      <path fill="#E24329" d="m128.075 236.075l47.104-144.97H80.97l47.104 144.97Z"/>
-      <path fill="#FC6D26" d="m128.075 236.074l-47.104-144.97H16.816l111.259 144.97Z"/>
-      <path fill="#FCA326" d="M16.816 91.104L.275 142.006a10.95 10.95 0 0 0 3.98 12.235l123.82 89.833z"/>
-      <path fill="#E24329" d="M16.816 91.105h64.155L52.822 5.15a5.49 5.49 0 0 0-10.454 0z"/>
-      <path fill="#FC6D26" d="m128.075 236.074l47.104-144.97h64.155z"/>
-      <path fill="#FCA326" d="m239.259 91.104l16.54 50.902a10.95 10.95 0 0 1-3.98 12.235l-123.744 89.833z"/>
-      <path fill="#E24329" d="M239.259 91.105h-64.155l28.149-85.954a5.49 5.49 0 0 1 10.454 0z"/>
+        <path
+          fill="currentColor"
+          d="M21.807 18.285L13.553.756a1.324 1.324 0 0 0-1.129-.754a1.31 1.31 0 0 0-1.206.626l-8.952 14.5a1.356 1.356 0 0 0 .016 1.455l4.376 6.778a1.408 1.408 0 0 0 1.58.581l12.703-3.757c.389-.115.707-.39.873-.755s.164-.783-.007-1.145zm-1.848.752L9.18 22.224a.452.452 0 0 1-.575-.52l3.85-18.438c.072-.345.549-.4.699-.08l7.129 15.138a.515.515 0 0 1-.325.713z"
+        />
       </svg>
     ),
-    skill_name: "GitLab",
-    lablename: "GitLab",
-    },
+    skill_name: 'Prisma',
+    lablename: 'Prisma',
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 236">
+        <path fill="#E24329" d="m128.075 236.075l47.104-144.97H80.97l47.104 144.97Z" />
+        <path fill="#FC6D26" d="m128.075 236.074l-47.104-144.97H16.816l111.259 144.97Z" />
+        <path
+          fill="#FCA326"
+          d="M16.816 91.104L.275 142.006a10.95 10.95 0 0 0 3.98 12.235l123.82 89.833z"
+        />
+        <path fill="#E24329" d="M16.816 91.105h64.155L52.822 5.15a5.49 5.49 0 0 0-10.454 0z" />
+        <path fill="#FC6D26" d="m128.075 236.074l47.104-144.97h64.155z" />
+        <path
+          fill="#FCA326"
+          d="m239.259 91.104l16.54 50.902a10.95 10.95 0 0 1-3.98 12.235l-123.744 89.833z"
+        />
+        <path fill="#E24329" d="M239.259 91.105h-64.155l28.149-85.954a5.49 5.49 0 0 1 10.454 0z" />
+      </svg>
+    ),
+    skill_name: 'GitLab',
+    lablename: 'GitLab',
+  },
+];
 
-  ];
+// Work Interface
+export interface WorkProps {
+  company: string;
+  position: string;
+  link: string;
+  daterange: string;
+  responsibilities: string[];
+}
+
+export interface ProjectProps {
+  name: string;
+  imageURL: string;
+  description: string;
+  liveURL: string;
+  codeURL: string;
+  techstack: string[];
+  date: string;
+  type: 'building' | 'working';
+}
+
+export const ProjectsData: ProjectProps[] = [
+  {
+    name: 'Truly',
+    imageURL: '/images/uzwal.jpg',
+    description:
+      'Truly is a modern blog web application that allows users to create, share, and discover engaging content with a clean and intuitive interface.',
+    liveURL: '    https://truly-blog-app.vercel.app/',
+    codeURL: '/',
+    techstack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Express.js', 'Node.js'],
+    date: '2024',
+    type: 'working',
+  },
+];
