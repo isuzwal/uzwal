@@ -25,7 +25,6 @@ export const SkillsView = () => {
           ))}
         </Marquee>
       </div>
-      <div className=" w-full"></div>
     </div>
   );
 };
