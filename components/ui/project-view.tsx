@@ -7,7 +7,39 @@ import { ProjectsData } from '@/types';
 import { GoDotFill } from 'react-icons/go';
 export const ProjectView = () => {
   return (
-    <div className="p-2 flex w-full ">
+    <div className="p-2 flex flex-col  w-full ">
+      <h1 className="flex flex-col text-[26px]  font-mono tracking-tight font-semibold ">
+        Projects
+        <span className="text-[12px] dark:text-neutral-400 text-neutral-600 font-mono font-semibold">
+          Filter a projects
+        </span>
+      </h1>
+      <div className="flex gap-2  items-center justify-between p-1">
+        <div className="flex gap-2">
+          <button
+            className="border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
+            bg-slate-50 dark:bg-neutral-900 border-neutral-200 hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer duration-300 ease-in-out transition-all
+          "
+          >
+            Working
+          </button>
+          <button
+            className="border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
+            bg-slate-50 dark:bg-neutral-900 border-neutral-200 hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer duration-300 ease-in-out transition-all
+          "
+          >
+            Building
+          </button>
+        </div>
+        <button
+          className="border w-20  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
+            bg-slate-50 dark:bg-neutral-900 border-neutral-200  hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer
+          "
+        >
+          Clear Filter
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-2 ">
         {ProjectsData.map((project: ProjectProps, index: number) => (
           <ProjectsComponents
