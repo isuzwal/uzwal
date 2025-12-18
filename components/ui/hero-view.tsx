@@ -78,14 +78,18 @@ export const HeroSection = () => {
       </div>
       <div className="w-full py-2">
         <p className="text-start items-center dark:text-neutral-400 text-neutral-600 font-semibold font-mono text-sm p-2 ">
-          Hi, I&apos;m <span className="font-mono font-bold">Uzwal Gaihre</span> , a passionate Full
-          Stack Developer specializing in building dynamic and responsive web applications using{' '}
-          <strong className=" font-mono">Typescript</strong>,{' '}
-          <strong className=" font-mono">React</strong>,{' '}
-          <strong className="  font-mono">Prisma</strong>,{' '}
-          <strong className=" font-mono">Next.js</strong>, and{' '}
-          <strong className=" font-mono">MongoDB</strong>. I build everything from scratch to
-          production.
+          Hi, I&apos;m{' '}
+          <span className="font-mono font-bold dark:text-neutral-50 text-neutral-950">
+            Uzwal Gaihre
+          </span>{' '}
+          , a passionate Full Stack Developer specializing in building dynamic and responsive web
+          applications using{' '}
+          <strong className=" dark:text-neutral-50 text-neutral-950  font-mono">Typescript</strong>,{' '}
+          <strong className=" dark:text-neutral-50 text-neutral-950  font-mono">React</strong>,{' '}
+          <strong className=" dark:text-neutral-50 text-neutral-950   font-mono">Prisma</strong>,{' '}
+          <strong className=" dark:text-neutral-50 text-neutral-950  font-mono">Next.js</strong>,
+          and <strong className=" dark:text-neutral-50 text-neutral-950  font-mono">MongoDB</strong>
+          . I build everything from scratch to production.
         </p>
       </div>
       <div className="border-t w-full  py-0.5">
