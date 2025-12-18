@@ -713,3 +713,21 @@ export const ProjectsData: ProjectProps[] = [
     type: 'building',
   },
 ];
+
+export interface Passion {
+  name: string;
+}
+export const MyPassions: Passion[] = [
+  {
+    name: 'Full-Stack Development',
+  },
+  {
+    name: 'Anime lover',
+  },
+  {
+    name: 'Introvert',
+  },
+  {
+    name: 'Software Engineering',
+  },
+];
