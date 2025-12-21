@@ -6,6 +6,8 @@ import { TbWorld } from 'react-icons/tb';
 import { ProjectsData } from '@/types';
 import { GoDotFill } from 'react-icons/go';
 import { useState } from 'react';
+import { motion } from 'motion/react';
+
 export const ProjectView = () => {
   const [filterProject, setFilterProjects] = useState<ProjectProps[]>(ProjectsData);
   const [isActive, setActive] = useState<string>('');
@@ -101,7 +103,7 @@ const ProjectsComponents = ({
 }: ProjectProps) => {
   return (
     <div>
-      <div
+      <motion.div
         className=" border-3 rounded-lg  max-w-[28rem] mx-auto w-full  dark:bg-neutral-950 dark:border-neutral-800/60
       bg-slate-50 border-slate-100 hover:bg-black/5       dark:hover:bg-white/5 duration-300 ease-in-out  "
       >
@@ -178,7 +180,7 @@ const ProjectsComponents = ({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
