@@ -5,7 +5,20 @@ import { FaCode } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
 import { ProjectsData } from '@/types';
 import { GoDotFill } from 'react-icons/go';
+import { useState } from 'react';
 export const ProjectView = () => {
+  const [filterProject, setFilterProjects] = useState<ProjectProps[]>(ProjectsData);
+  const [isActive, setActive] = useState<string>('');
+
+  const filterProjects = (filter: string) => {
+    if (!filter) {
+      setFilterProjects(ProjectsData);
+      return;
+    }
+    const SelectedProject = ProjectsData.filter((project) => project.type === filter);
+    setFilterProjects(SelectedProject);
+  };
+
   return (
     <div className="p-2 flex flex-col  w-full ">
       <h1 className="flex flex-col text-[26px]  font-mono tracking-tight font-semibold ">
@@ -17,31 +30,50 @@ export const ProjectView = () => {
       <div className="flex gap-2  items-center justify-between p-1">
         <div className="flex gap-2">
           <button
-            className="border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
-            bg-slate-50 dark:bg-neutral-900 border-neutral-200 hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer duration-300 ease-in-out transition-all
-          "
+            onClick={() => {
+              filterProjects('working');
+              setActive('Working');
+            }}
+            className={`border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl cursor-pointer duration-300 ease-in-out transition-all   hover:scale-[0.98]
+             ${
+               isActive === 'Working'
+                 ? 'dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
+                 : 'bg-slate-50  dark:bg-neutral-950  dark:shadow-[inset_1px_2px_3px_rgba(30,30,30,1)] border-neutral-200  text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-900 hover:bg-neutral-100   dark:hover:bg-neutral-900 '
+             }
+          `}
           >
             Working
           </button>
           <button
-            className="border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
-            bg-slate-50 dark:bg-neutral-900 border-neutral-200 hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer duration-300 ease-in-out transition-all
-          "
+            onClick={() => {
+              filterProjects('building');
+              setActive('Building');
+            }}
+            className={`border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl cursor-pointer duration-300 ease-in-out transition-all   hover:scale-[0.98]
+             ${
+               isActive === 'Building'
+                 ? 'dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
+                 : 'bg-slate-50  dark:bg-neutral-950  dark:shadow-[inset_1px_2px_3px_rgba(30,30,30,1)] border-neutral-200  text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-900 hover:bg-neutral-100   dark:hover:bg-neutral-900 '
+             }
+          `}
           >
             Building
           </button>
         </div>
         <button
-          className="border w-20  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl
-            bg-slate-50 dark:bg-neutral-900 border-neutral-200  hover:text-neutral-600 text-neutral-800 dark:text-neutral-300 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-950  cursor-pointer
+          onClick={() => {
+            filterProjects('');
+            setActive('');
+          }}
+          className="border w-20  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl hover:scale-[0.98] duration-300 transition-all ease-in-out
+            dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)]  text-neutral-600 hover:text-neutral-500 dark:text-neutral-200   dark:hover:text-neutral-400 dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900  cursor-pointer
           "
         >
           Clear Filter
         </button>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-2 ">
-        {ProjectsData.map((project: ProjectProps, index: number) => (
+        {filterProject.map((project: ProjectProps, index: number) => (
           <ProjectsComponents
             key={index}
             name={project.name}

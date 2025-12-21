@@ -1,10 +1,6 @@
-"use client";
+'use client';
 
-import { ProjectView } from "@/components/ui/project-view";
-
-
-
-
-export default  function Page(){
-  return  <ProjectView />
+import { ProjectView } from '@/components/ui/project-view';
+export default function Page() {
+  return <ProjectView />;
 }
