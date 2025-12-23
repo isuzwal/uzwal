@@ -1,6 +1,6 @@
 'use client';
 import { MyPassions, Passion, ShortBio, SocialMedia } from '@/types';
-import { FileText, Send } from 'lucide-react';
+import { FileText, Send, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'motion/react';
@@ -9,22 +9,47 @@ import { useEffect, useState } from 'react';
 
 export const HeroSection = () => {
   const router = useRouter();
-  const [passion, setPassion] = useState<string>('Passionate Developer');
+  const [passion, setPassion] = useState<string>('Working Hard');
+  const [Isopen, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
       setPassion(MyPassions[index].name);
       index = (index + 1) % MyPassions.length;
-    }, 3000);
-    // Cleanup interval on unmount
+    }, 5000);
+
     return () => {
       clearInterval(interval);
     };
   }, []);
 
   return (
-    <div className=" flex flex-col   w-full  px-0 py-0 ">
+    <div className=" relative flex flex-col   w-full  px-0 py-0 ">
+      {Isopen && (
+        <div className="  h-screen w-full  bg-background/80  z-60 absolute  inset-0 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            className="absolute dark:hover:text-neutral-200 duration-300 transition-all ease-in-out dark:text-neutral-400 right-1.5 top-2 bg-neutral-900 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-neutral-800"
+          >
+            <X className="size-5" />
+          </button>
+          <div className="border  relative  max-w-md mx-auto w-full   bg-neutral-950  rounded-md  border-neutral-900 z-70 p-2">
+            <div className=" w-full flex justify-start items-center">
+              <div className="  rounded-md  ">
+                <Image
+                  src="/images/uzwal.jpg"
+                  alt="uzwal"
+                  width={200}
+                  height={200}
+                  className="rounded-md  cursor-pointer  z-30 border-3 border-neutral-900 object-cover shadow-2xs transition-all duration-300 ease-in-out"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="flex flex-col gap-1  relative border-b">
         <div className=" relative border-b flex flex-col px-2 py-2  h-72">
           <div className="absolute z-10 inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20 dark:from-background/80 dark:via-transparent dark:to-background/80" />
@@ -33,11 +58,12 @@ export const HeroSection = () => {
           <div className=" absolute -bottom-8 left-1 rounded-full z-50   border-[3px] border-neutral-800">
             <div className=" relative   rounded-full ">
               <Image
+                onClick={() => setOpen((prev) => !prev)}
                 src="/images/uzwal.jpg"
                 alt="uzwal"
                 width={100}
                 height={100}
-                className="rounded-full border-3 border-neutral-900 object-cover shadow-2xs grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+                className="rounded-full cursor-pointer  border-3 border-neutral-900 object-cover shadow-2xs grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
               />
             </div>
           </div>
@@ -48,7 +74,7 @@ export const HeroSection = () => {
               <h1 className="font-mono text-[24px] sm:text-[26px] font-semibold  text-neutral-800 dark:text-neutral-100">
                 Uzwal Gaihre
               </h1>
-              <p className="mb-1 border  rounded-4xl  text-[11px] h-5    mx-auto w-full max-w-40 flex items-center justify-center bg-slate-50 border-slate-200 shadow-[inset_0_2px_4px_rgba(210,210,210,1)] dark:text-neutral-400 dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(50,50,50,0.5)] dark:border-neutral-900 text-neutral-600  font-mono font-semibold">
+              <p className="mb-1 border  rounded-4xl  text-[11px] px-1.5  py-0.5 flex items-center justify-center bg-slate-50 border-slate-200 shadow-[inset_0_2px_4px_rgba(220,220,220,1)] dark:text-neutral-400 dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(50,50,50,0.5)] dark:border-neutral-900 text-neutral-600  font-mono font-semibold">
                 {passion}
               </p>
             </div>

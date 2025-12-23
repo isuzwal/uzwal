@@ -8,7 +8,6 @@ export default function Home() {
     <div className="font-medium font-mono min-h-screen">
       <HeroSection />
       <SkillsView />
-      {/* <WorkView /> */}
     </div>
   );
 }

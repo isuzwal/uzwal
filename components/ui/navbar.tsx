@@ -1,26 +1,32 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Links } from "@/types";
-import { AnimatedThemeToggler } from "./animated-theme-toggler";
-import { usePathname } from "next/navigation";
-import { motion, Variants } from "motion/react";
-import { useState } from "react";
-import Image from "next/image";
+import Link from 'next/link';
+import { Links } from '@/types';
+import { AnimatedThemeToggler } from './animated-theme-toggler';
+import { usePathname } from 'next/navigation';
+import { motion, Variants } from 'motion/react';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export const NavBar = () => {
   const pathname = usePathname();
 
-
   const isActive = (linkPath: string) => linkPath === pathname;
 
-
   return (
-    <div className="flex   sticky top-0 z-60 bg-white   dark:bg-neutral-900/30  backdrop-blur-xl  border-b-2 items-center justify-between px-2 py-2">
+    <div className="flex   sticky top-0 z-90 bg-white   dark:bg-neutral-900/30  backdrop-blur-xl  border-b-2 items-center justify-between px-2 py-2">
       <motion.div
-        className="  flex items-center justify-center    overflow-hidden border bg-neutral-50 shadow-[inset_0_-3px_6px_rgb(215,215,215,0.25)_inset_0_3px_6px_rgb(215,215,215.25)]   rounded-full  dark:bg-neutral-950 dark:shadow-[inset_0_3px_3px_rgb(45,45,45,0.5)]  p-0 ">
-        <Link href="/" className="font-mono cursor-pointer text-[20px]   ">
-          <Image src="/images/uzwal.jpg" alt="_profile_image" height={30} width={30} className="rounded-full" />
+        whileTap={{ scale: -0.98 }}
+        className="  flex items-center justify-center     overflow-hidden   border-2 border-slate-200 dark:border-neutral-800 duration-300 transition-all ease-in-out   rounded-md  p-0 "
+      >
+        <Link href="/" className=" cursor-pointer">
+          <Image
+            src="/images/uzwal.jpg"
+            alt="_profile_image"
+            height={30}
+            width={30}
+            className="rounded-[4px]"
+          />
         </Link>
       </motion.div>
 
@@ -31,9 +37,10 @@ export const NavBar = () => {
             key={link.name}
             className={`cursor-pointer font-medium font-mono dark:hover:text-neutral-300 hover:text-neutral-800 ${
               isActive(link.link)
-                ? "dark:text-white text-neutral-950  "
-                : "dark:text-neutral-500 text-neutral-400 "
-            }`}>
+                ? 'dark:text-white text-neutral-950  '
+                : 'dark:text-neutral-500 text-neutral-400 '
+            }`}
+          >
             <span>{link.name}</span>
           </Link>
         ))}
@@ -44,7 +51,8 @@ export const NavBar = () => {
           bg-zinc-100 border-neutral-200 shadow-[inset_0_4px_6px_rgba(210,210,210,1)]
           hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-900 
           dark:hover:bg-neutral-800 duration-300 transition-all ease-in-out
-          dark:shadow-[inset_0_4px_6px_rgba(52,52,52,1)]">
+          dark:shadow-[inset_0_4px_6px_rgba(52,52,52,1)]"
+        >
           <AnimatedThemeToggler className="group-hover:cursor-pointer dark:text-neutral-300 text-neutral-600 hover:-rotate-12 duration-300  transition-all ease-in-out" />
         </motion.div>
       </div>
