@@ -1,5 +1,5 @@
 'use client';
-import { MyPassions, Passion, ShortBio, SocialMedia } from '@/types';
+import { MyPassions, ShortBio, SocialMedia } from '@/types';
 import { FileText, Send, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,24 +27,58 @@ export const HeroSection = () => {
   return (
     <div className=" relative flex flex-col   w-full  px-0 py-0 ">
       {Isopen && (
-        <div className="  h-screen w-full  bg-background/80  z-60 absolute  inset-0 flex items-center justify-center">
+        <div
+          className="h-screen w-full bg-background/50 dark:bg-background/80 z-60 absolute inset-0 flex items-center justify-center"
+          onClick={() => setOpen(false)}
+        >
           <button
             type="button"
             onClick={() => setOpen(false)}
-            className="absolute dark:hover:text-neutral-200 duration-300 transition-all ease-in-out dark:text-neutral-400 right-1.5 top-2 bg-neutral-900 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-neutral-800"
+            className="absolute  dark:hover:text-neutral-200 duration-300 transition-all ease-in-out dark:text-neutral-400 right-1.5 top-2 bg-background/60  dark:bg-neutral-900 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-neutral-800"
           >
             <X className="size-5" />
           </button>
-          <div className="border  relative  max-w-md mx-auto w-full   bg-neutral-950  rounded-md  border-neutral-900 z-70 p-2">
-            <div className=" w-full flex justify-start items-center">
-              <div className="  rounded-md  ">
+          <div
+            className="border-[3px]  relative  max-w-[20rem] mx-auto w-full  flex justify-center items-center  bg-slate-100 dark:bg-neutral-900  rounded-[1.6rem]   border-slate-200 dark:border-neutral-700 dark:shadow-[inset_0_2px_2px_rgba(52,52,52,0.5)] z-70 p-1.5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className=" mt-2  w-full flex  gap-2  flex-col justify-center  items-center ">
+              <div className="relative rounded-md h-44 w-48">
                 <Image
                   src="/images/uzwal.jpg"
                   alt="uzwal"
-                  width={200}
-                  height={200}
-                  className="rounded-md  cursor-pointer  z-30 border-3 border-neutral-900 object-cover shadow-2xs transition-all duration-300 ease-in-out"
+                  fill={true}
+                  className="rounded-md cursor-pointer z-30 object-cover shadow-2xs transition-all duration-300 ease-in-out"
                 />
+              </div>
+              <div className="flex  p-1.5 flex-col  items-center  w-full justify-center">
+                <p className="dark:text-neutral-400 text-neutral-600 font-semibold font-mono tracking-tight text-[11px]">
+                  Hi, I’m Uzwal Gaihre. In my free time, I enjoy watching anime, playing football,
+                  and taking moments to relax and recharge. These simple things help me stay
+                  balanced, focused, and motivated.
+                </p>
+
+                <div className=" flex gap-3 items-center mt-1 w-full  justify-start  px-2 mr-3 py-1.5 ">
+                  {SocialMedia.map((social) => (
+                    <div
+                      key={social.lablename}
+                      className=" group relative border-2 rounded-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 dark:text-neutral-400 p-1 bg-background/70
+                   dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(40,40,40,1.5)] shadow-[inset_0_2px_1px_rgba(210,210,210,0.9)]
+                     duration-200 cursor-pointer  ease-in-out "
+                    >
+                      <Link href={social.link} target="_blank">
+                        {social.icon}
+                      </Link>
+                      <span
+                        className="absolute bottom-full mb-2   left-3 transform -translate-x-1/2  dark:bg-neutral-100 dark:text-neutral-700
+                bg-neutral-800 text-white text-xs rounded px-2 py-1 opacity-0 
+                group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
+                      >
+                        {social.lablename}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -79,11 +113,11 @@ export const HeroSection = () => {
               </p>
             </div>
             <div className=" flex gap-3 items-center px-2 mr-3 py-1.5 ">
-              {SocialMedia.map((social) => (
+              {SocialMedia.slice(0, 4).map((social) => (
                 <div
                   key={social.lablename}
                   className=" group relative border-2 rounded-md text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100 dark:text-neutral-400 p-1 bg-neutral-100 shadow-[inset_0_2px_4px_rgba(250,250,250,1)]
-                   dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(40,40,40,1.5)]
+                   dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(40,40,40,0.9)]
                      duration-200 ease-in-out "
                 >
                   <Link href={social.link} target="_blank">
@@ -91,8 +125,8 @@ export const HeroSection = () => {
                   </Link>
                   <span
                     className="absolute bottom-full mb-2   left-3 transform -translate-x-1/2  dark:bg-neutral-100 dark:text-neutral-700
-                bg-neutral-800 text-white text-xs rounded px-2 py-1 opacity-0 
-                group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
+              bg-neutral-800 text-white text-xs rounded px-2 py-1 opacity-0 
+              group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
                   >
                     {social.lablename}
                   </span>

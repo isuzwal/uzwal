@@ -1,6 +1,7 @@
 import { Code, Github, Linkedin, MailIcon, Map, Twitter } from 'lucide-react';
 import { JSX } from 'react';
 import { BiWorld } from 'react-icons/bi';
+import { BsDiscord, BsMedium } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
 import { SiPeerlist } from 'react-icons/si';
 export interface ChildrenProps {
@@ -50,6 +51,16 @@ export const SocialMedia: MediaLink[] = [
     icon: <SiPeerlist className="size-4" />,
     lablename: 'PeerList',
     link: 'https://peerlist.io/lufffy',
+  },
+  {
+    icon: <BsMedium />,
+    lablename: 'Medium',
+    link: 'https://medium.com/@ujjwalgaihre0',
+  },
+  {
+    icon: <BsDiscord />,
+    lablename: 'Discord',
+    link: 'https://discord.gg/jKWpSD4gmz',
   },
 ];
 
