@@ -1,17 +1,17 @@
 import { Code, Github, Linkedin, MailIcon, Map, Twitter } from 'lucide-react';
-import { JSX } from 'react';
 import { BiWorld } from 'react-icons/bi';
 import { BsDiscord, BsMedium } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
 import { SiPeerlist } from 'react-icons/si';
-export interface ChildrenProps {
-  children: React.ReactNode;
-}
-
-export interface LinkProps {
-  name: string;
-  link: string;
-}
+import {
+  BioProps,
+  LinkProps,
+  MediaLink,
+  Passion,
+  ProjectProps,
+  SkillsProps,
+  WorksProps,
+} from './types';
 
 export const Links: LinkProps[] = [
   {
@@ -24,12 +24,6 @@ export const Links: LinkProps[] = [
     link: '/work',
   },
 ];
-
-interface MediaLink {
-  icon: React.ReactNode;
-  lablename: string;
-  link: string;
-}
 
 export const SocialMedia: MediaLink[] = [
   {
@@ -64,11 +58,7 @@ export const SocialMedia: MediaLink[] = [
   },
 ];
 
-interface BIOProps {
-  icons: React.ReactNode;
-  data: string;
-}
-export const ShortBio: BIOProps[] = [
+export const ShortBio: BioProps[] = [
   {
     icons: <Code className="size-4" />,
     data: 'Full Stack developer',
@@ -87,11 +77,6 @@ export const ShortBio: BIOProps[] = [
   },
 ];
 
-interface SkillsProps {
-  icon: JSX.Element;
-  skill_name: string;
-  lablename: string;
-}
 export const Skills: SkillsProps[] = [
   {
     icon: (
@@ -273,21 +258,6 @@ export const Skills: SkillsProps[] = [
     lablename: 'GitLab',
   },
 ];
-
-export interface TechStackItem {
-  name: string;
-  icon: React.ReactNode;
-}
-
-export interface ProjectProps {
-  name: string;
-  imageURL: string;
-  description: string;
-  liveURL: string;
-  codeURL: string;
-  techstack: TechStackItem[];
-  type: 'building' | 'working';
-}
 
 export const ProjectsData: ProjectProps[] = [
   {
@@ -718,9 +688,6 @@ export const ProjectsData: ProjectProps[] = [
   },
 ];
 
-export interface Passion {
-  name: string;
-}
 export const MyPassions: Passion[] = [
   {
     name: 'Love to Play Football',
@@ -732,22 +699,6 @@ export const MyPassions: Passion[] = [
     name: 'Introvert',
   },
 ];
-
-interface SocialMediaProps {
-  name: string;
-  icon: React.ReactNode;
-  url: string;
-}
-export interface WorksProps {
-  image: string;
-  company_name: string;
-  social_media: SocialMediaProps[];
-  role: string;
-  duration: string;
-  descrption_1: string;
-  descrption_2: string;
-  tech: TechStackItem[];
-}
 
 export const Works: WorksProps[] = [
   {
