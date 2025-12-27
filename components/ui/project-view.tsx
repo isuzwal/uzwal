@@ -1,4 +1,3 @@
-import { ProjectProps } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCode } from 'react-icons/fa';
@@ -7,6 +6,7 @@ import { ProjectsData } from '@/types';
 import { GoDotFill } from 'react-icons/go';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import { ProjectProps } from '@/types/types';
 
 export const ProjectView = () => {
   const [filterProject, setFilterProjects] = useState<ProjectProps[]>(ProjectsData);

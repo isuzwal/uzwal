@@ -1,7 +1,8 @@
-import { Works, WorksProps } from '@/types';
+import { Works } from '@/types';
+import { WorksProps } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BiWorld } from 'react-icons/bi';
+
 import { GoDotFill } from 'react-icons/go';
 
 export const WorkView = () => {
