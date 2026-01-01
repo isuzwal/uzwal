@@ -50,15 +50,15 @@ export const Experiences = () => {
                 </g>
               </svg>
             </div>
-            <div className=" w-full">
-              <div className=" flex  gap-6 items-end justify-start px-2 w-[60%] ">
+            <div className=" w-full flex flex-col  justify-end">
+              <div className=" flex  gap-6 justify-between px-2">
                 <div className="relative inline-block  p-0.5">
                   <h1
                     onCopy={(e) => {
                       e.preventDefault();
                       e.clipboardData.setData('text/plain', url);
                     }}
-                    className=" blur-[14px] font-mono font-semibold text-[24px] dark:text-neutral-100 text-neutral-700 z-10 relative"
+                    className=" blur-[14px] font-mono font-semibold  text-[16px] lg:text-[24px] dark:text-neutral-100 text-neutral-700 z-10 relative"
                   >
                     EasyMy Learing
                   </h1>
