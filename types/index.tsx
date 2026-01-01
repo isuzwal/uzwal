@@ -18,7 +18,6 @@ export const Links: LinkProps[] = [
     name: 'Projects',
     link: '/projects',
   },
-
   {
     name: 'Work',
     link: '/work',

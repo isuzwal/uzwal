@@ -10,16 +10,17 @@ import { ProjectProps } from '@/types/types';
 
 export const ProjectView = () => {
   const [filterProject, setFilterProjects] = useState<ProjectProps[]>(ProjectsData);
-  const [isActive, setActive] = useState<string>('');
+  const [isActive, setActive] = useState<string>('all');
 
   const filterProjects = (filter: string) => {
-    if (!filter) {
+    if (filter === 'all') {
       setFilterProjects(ProjectsData);
       return;
     }
-    const SelectedProject = ProjectsData.filter((project) => project.type === filter);
-    setFilterProjects(SelectedProject);
+    const selectedProjects = ProjectsData.filter((project) => project.type === filter);
+    setFilterProjects(selectedProjects);
   };
+  const selectedCount = filterProject.length;
 
   return (
     <div className="p-2 flex flex-col  w-full ">
@@ -39,12 +40,12 @@ export const ProjectView = () => {
             className={`border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl cursor-pointer duration-300 ease-in-out transition-all   hover:scale-[0.98]
              ${
                isActive === 'Working'
-                 ? 'dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
+                 ? 'dark:bg-neutral-800 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
                  : 'bg-slate-50  dark:bg-neutral-950  dark:shadow-[inset_1px_2px_3px_rgba(30,30,30,1)] border-neutral-200  text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-900 hover:bg-neutral-100   dark:hover:bg-neutral-900 '
              }
           `}
           >
-            Working
+            Working {isActive === 'Working' && `(${selectedCount})`}
           </button>
           <button
             onClick={() => {
@@ -54,18 +55,18 @@ export const ProjectView = () => {
             className={`border w-16  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl cursor-pointer duration-300 ease-in-out transition-all   hover:scale-[0.98]
              ${
                isActive === 'Building'
-                 ? 'dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
+                 ? 'dark:bg-neutral-800 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)] dark:hover:text-neutral-100 text-neutral-500  dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900 '
                  : 'bg-slate-50  dark:bg-neutral-950  dark:shadow-[inset_1px_2px_3px_rgba(30,30,30,1)] border-neutral-200  text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 dark:border-neutral-900 hover:bg-neutral-100   dark:hover:bg-neutral-900 '
              }
           `}
           >
-            Building
+            Building {isActive === 'Building' && `(${selectedCount})`}
           </button>
         </div>
         <button
           onClick={() => {
-            filterProjects('');
-            setActive('');
+            filterProjects('all');
+            setActive('all');
           }}
           className="border w-20  h-4  flex items-center justify-center text-[8px] font-mono font-medium py-1 rounded-2xl hover:scale-[0.98] duration-300 transition-all ease-in-out
             dark:bg-neutral-900 bg-neutral-100 border-slate-200 shadow-[inset_1px_2px_3px-rgba(220,220,220,1.5)]  text-neutral-600 hover:text-neutral-500 dark:text-neutral-200   dark:hover:text-neutral-400 dark:shadow-[inset_0px_1px_2px_rgba(50,50,50,0.5)] dark:border-neutral-900  cursor-pointer
