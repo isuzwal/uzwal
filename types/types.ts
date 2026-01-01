@@ -48,5 +48,10 @@ export interface WorksProps {
   duration: string;
   descrption_1: string;
   descrption_2: string;
+  descrption_3:string;
   tech: TechStackItem[];
+}
+export interface TechnologiesProps {
+  name: string;
+  icon: React.ReactNode;
 }

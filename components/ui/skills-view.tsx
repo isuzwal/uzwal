@@ -4,7 +4,7 @@ import { Marquee } from './marquee';
 export const SkillsView = () => {
   return (
     <div className=" flex flex-col  border-t border-b mt-2  w-full  px-0 py-0   relative ">
-      <h2 className="px-2 py-0.5 mt-2  text-xl font-semibold text-neutral-900 dark:text-neutral-200">
+      <h2 className="px-2 py-0.5 mt-2  text-[20px] font-semibold text-neutral-900 dark:text-neutral-200">
         Skills
       </h2>
       <div className="relative overflow-hidden">
