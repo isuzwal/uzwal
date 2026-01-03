@@ -25,7 +25,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" relative flex flex-col  border w-full  px-0 py-0 ">
+    <div className=" relative flex flex-col   w-full  px-0 py-0 ">
       {Isopen && (
         <div
           className="h-screen w-full bg-background/50 dark:bg-background/80 z-50  fixed inset-0 flex items-center justify-center"
@@ -48,7 +48,9 @@ export const HeroSection = () => {
                   src="/images/uzwal.jpg"
                   alt="uzwal"
                   fill={true}
-                  className="rounded-md cursor-pointer z-30 object-cover shadow-2xs transition-all duration-300 ease-in-out"
+                  loading="lazy"
+                  placeholder="empty"
+                  className="rounded-md cursor-pointer z-20 object-cover shadow-2xs transition-all duration-300 ease-in-out"
                 />
               </div>
               <div className="flex  p-1.5 flex-col  items-center  w-full justify-center">
@@ -88,7 +90,14 @@ export const HeroSection = () => {
         <div className=" relative border-b flex flex-col px-2 py-2  h-72">
           <div className="absolute z-10 inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20 dark:from-background/80 dark:via-transparent dark:to-background/80" />
           <div className="absolute  z-10 inset-0 bg-gradient-to-b from-background/10 via-background/5  to-background/10 dark:from-background/30 dark:via-background/40 dark:to-background/50" />
-          <Image src="/images/banner.jpg" alt="_banner" fill className="object-cover" />
+          <Image
+            src="/images/banner.jpg"
+            alt="_banner"
+            fill
+            className="object-cover"
+            loading="lazy"
+            placeholder="empty"
+          />
           <div className=" absolute -bottom-8 left-1 rounded-full z-50   border-[3px] border-neutral-800">
             <div className=" relative   rounded-full ">
               <Image
@@ -98,6 +107,7 @@ export const HeroSection = () => {
                 width={100}
                 height={100}
                 className="rounded-full cursor-pointer  border-3 border-neutral-900 object-cover shadow-2xs grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+                loading="lazy"
               />
             </div>
           </div>

@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { Links } from '@/types';
 import { AnimatedThemeToggler } from './animated-theme-toggler';
 import { usePathname } from 'next/navigation';
-import { motion, Variants } from 'motion/react';
-import { useState } from 'react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 
 export const NavBar = () => {
@@ -25,6 +24,8 @@ export const NavBar = () => {
             alt="_profile_image"
             height={30}
             width={30}
+            placeholder="empty"
+            loading="lazy"
             className="rounded-[4px]"
           />
         </Link>
