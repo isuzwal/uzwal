@@ -25,16 +25,16 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" relative flex flex-col   w-full  px-0 py-0 ">
+    <div className=" relative flex flex-col  border w-full  px-0 py-0 ">
       {Isopen && (
         <div
-          className="h-screen w-full bg-background/50 dark:bg-background/80 z-60 absolute inset-0 flex items-center justify-center"
+          className="h-screen w-full bg-background/50 dark:bg-background/80 z-50  fixed inset-0 flex items-center justify-center"
           onClick={() => setOpen(false)}
         >
           <button
             type="button"
             onClick={() => setOpen(false)}
-            className="absolute  dark:hover:text-neutral-200 duration-300 transition-all ease-in-out dark:text-neutral-400 right-1.5 top-2 bg-background/60  dark:bg-neutral-900 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-neutral-800"
+            className=" absolute right-[22%] z-50 top-20 dark:hover:text-neutral-200 duration-300 transition-all ease-in-out dark:text-neutral-400  bg-background/60  dark:bg-neutral-900 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-neutral-800"
           >
             <X className="size-5" />
           </button>
