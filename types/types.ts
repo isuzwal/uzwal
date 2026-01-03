@@ -48,10 +48,25 @@ export interface WorksProps {
   duration: string;
   descrption_1: string;
   descrption_2: string;
-  descrption_3:string;
+  descrption_3: string;
   tech: TechStackItem[];
 }
 export interface TechnologiesProps {
   name: string;
   icon: React.ReactNode;
+}
+export interface SongActions {
+  canPlay: boolean;
+  canShuffle: boolean;
+  canRepeatContext: boolean;
+  canRepeatTrack: boolean;
+}
+
+export interface Song {
+  albumImage?: string;
+  artists?: string;
+  songName?: string;
+  songUrl: string;
+  isPlaying: boolean;
+  actions?: SongActions;
 }

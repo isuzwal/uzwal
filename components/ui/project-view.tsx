@@ -114,6 +114,7 @@ const ProjectsComponents = ({
             src={imageURL || '/images/unzwal.jpg'}
             alt={name}
             fill
+            placeholder="empty"
             className="object-cover rounded-t-[6px] group-hover:scale-110 duration-500 ease-in-out transition-all"
           />
         </div>
