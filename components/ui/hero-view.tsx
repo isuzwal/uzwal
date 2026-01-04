@@ -177,11 +177,11 @@ export const HeroSection = () => {
       </div>
       <div className="flex gap-2 items-center px-2  py-1.5 w-full  ">
         <motion.button
-          onClick={() => router.push('/resume')}
+          onClick={() => router.push('/')}
           whileHover={{ scale: 0.99 }}
           className="px-4 py-2  flex items-center gap-2   cursor-pointer rounded-md font-semibold text-sm dark:bg-neutral-900 dark:shadow-[inset_0_2px_4px_rgba(40,40,40,1.5)] bg-neutral-100 shadow-[inset_2px_2px_4px_rgba(210,210,210,1)] hover:shadow-[inset_2px_2px_4px_rgba(180,180,180,1)]  duration-300 ease-in-out  "
         >
-          <FileText className="size-4" /> Resume/CV
+          <FileText className="size-4" /> Book a Call 
         </motion.button>
         <motion.button
           onClick={() => router.push('/touch')}
